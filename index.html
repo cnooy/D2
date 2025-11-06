@@ -12,15 +12,31 @@
 
   <audio id="ambient" src="assets/ambient.mp3" autoplay loop></audio>
 
-  <!-- STAGE: PAST -->
-  <section id="past" class="stage active">
+  <section id="main" class="stage active">
+  <div class="content code-screen">
+    <h1>I shouldn't have done that. I want to start over.</h1>
+
+    <div id="question-wrapper">
+      <span id="sub-question"><u>Would you try reset Rest Life with me?</u></span>
+      <div id="moving-box">Reset Life</div>
+    </div>
+
+    <pre><code>
+      if (sad() == true) {
+      <span class="clickable" onclick="goToStage('past')">sad()</span>.stop();
+      <span>beAwesome();</span>
+      }
+    </code></pre>
+  </div>
+</section>
+
+  <section id="past" class="stage">
     <div class="content">
       <p class="option" onclick="handleChoice('past', 'loop')">mistake</p>
       <p class="option" onclick="handleChoice('past', 'next')">echo</p>
     </div>
   </section>
 
-  <!-- STAGE: PRESENT -->
   <section id="present" class="stage">
     <div class="content">
       <p class="option" onclick="handleChoice('present', 'loop')">weight</p>
@@ -28,7 +44,6 @@
     </div>
   </section>
 
-  <!-- STAGE: DECISION -->
   <section id="decision" class="stage">
     <div class="content">
       <p class="option" onclick="handleChoice('decision', 'loop')">reflection</p>
@@ -36,7 +51,6 @@
     </div>
   </section>
 
-  <!-- STAGE: FUTURE -->
   <section id="future" class="stage">
     <div class="content">
       <p class="option" onclick="handleChoice('future', 'loop')">creation</p>
