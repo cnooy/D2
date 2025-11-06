@@ -1,0 +1,133 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Noto Sans', sans-serif;
+  overflow: hidden;
+}
+
+.stage {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 1s ease-in-out;
+}
+
+.stage.active {
+  display: flex;
+  opacity: 1;
+  z-index: 1;
+}
+
+.stage.fade-out {
+  opacity: 0;
+}
+
+/* Stage Backgrounds */
+#main {
+  background-color: #1e2a38;
+  color: #ffffff;
+}
+
+#past {
+  background-color: #1f2c3d;
+  color: #e0e0e0;
+}
+
+#present {
+  background-color: #cfd1d2;
+  color: #333;
+}
+
+#decision {
+  background-color: #dceefc;
+  color: #2d3e50;
+}
+
+#future {
+  background: linear-gradient(to bottom, #e8e5dc, #cbefff);
+  color: #1e2b34;
+}
+
+/* Content styling */
+.content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+}
+
+.option {
+  font-size: 2rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s;
+}
+
+.option:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+.clickable {
+  color: #78c0ff;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.clickable:hover {
+  color: #b0dcff;
+}
+
+/* Main screen (code style) */
+.code-screen h1 {
+  font-size: 2rem;
+}
+
+.code-screen pre {
+  font-family: monospace;
+  background-color: #1e2a38;
+  color: #ffffff;
+  text-align: left;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+#question-wrapper {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+#sub-question {
+  font-size: 1.2rem;
+  margin-right: 12px;
+}
+
+#moving-box {
+  position: absolute;
+  background-color: #1976a4;
+  color: #fff;
+  padding: 8px 12px;
+  border: 2px solid #00394f;
+  border-radius: 4px;
+  white-space: nowrap;
+  z-index: 10;
+  cursor: pointer;
+
+  /* 부드럽고 물리적인 가속-감속 커브 */
+  transition: 
+    left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
+    top 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .option {
+    font-size: 1.5rem;
+  }
+}
