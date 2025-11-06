@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Present Tense: Returning to My Time</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <audio id="ambient" src="assets/ambient.mp3" autoplay loop></audio>
+
+  <!-- STAGE: PAST -->
+  <section id="past" class="stage active">
+    <div class="content">
+      <p class="option" onclick="handleChoice('past', 'loop')">mistake</p>
+      <p class="option" onclick="handleChoice('past', 'next')">echo</p>
+    </div>
+  </section>
+
+  <!-- STAGE: PRESENT -->
+  <section id="present" class="stage">
+    <div class="content">
+      <p class="option" onclick="handleChoice('present', 'loop')">weight</p>
+      <p class="option" onclick="handleChoice('present', 'next')">pause</p>
+    </div>
+  </section>
+
+  <!-- STAGE: DECISION -->
+  <section id="decision" class="stage">
+    <div class="content">
+      <p class="option" onclick="handleChoice('decision', 'loop')">reflection</p>
+      <p class="option" onclick="handleChoice('decision', 'next')">step</p>
+    </div>
+  </section>
+
+  <!-- STAGE: FUTURE -->
+  <section id="future" class="stage">
+    <div class="content">
+      <p class="option" onclick="handleChoice('future', 'loop')">creation</p>
+      <p class="option" onclick="handleChoice('future', 'next')">calm</p>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
