@@ -26,7 +26,7 @@ body, html {
   opacity: 0;
 }
 
-/* Stage Backgrounds */
+
 #main {
   background-color: #1e2a38;
   color: #ffffff;
@@ -52,7 +52,7 @@ body, html {
   color: #1e2b34;
 }
 
-/* Content styling */
+
 .content {
   text-align: center;
   display: flex;
@@ -75,14 +75,13 @@ body, html {
 .clickable {
   color: #78c0ff;
   cursor: pointer;
-  text-decoration: underline;
 }
 
 .clickable:hover {
   color: #b0dcff;
 }
 
-/* Main screen (code style) */
+
 .code-screen h1 {
   font-size: 2rem;
 }
@@ -118,14 +117,14 @@ body, html {
   z-index: 10;
   cursor: pointer;
 
-  /* 부드럽고 물리적인 가속-감속 커브 */
+
   transition: 
     left 0.5s cubic-bezier(0.22, 0.61, 0.36, 1),
     top 0.5s cubic-bezier(0.22, 0.61, 0.36, 1);
 }
 
 
-/* Responsive */
+
 @media (max-width: 768px) {
   .option {
     font-size: 1.5rem;
